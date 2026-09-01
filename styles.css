@@ -1,0 +1,1314 @@
+/* =====================================================
+   FUGA COLORADA
+   ESTILOS PRINCIPALES
+===================================================== */
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --black: #172019;
+
+    --dark: #202a22;
+
+    --green: #53634b;
+
+    --green-dark: #39483b;
+
+    --cream: #f4f0e6;
+
+    --paper: #faf8f2;
+
+    --sand: #d8c8a4;
+
+    --earth: #66503c;
+
+    --text: #252b26;
+
+    --muted: #666b63;
+
+    --line: rgba(37, 43, 38, 0.15);
+
+
+    --serif:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+
+    --sans:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    background: var(--paper);
+
+    color: var(--text);
+
+    font-family: var(--sans);
+
+    line-height: 1.7;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.container {
+
+    width: min(
+        1120px,
+        calc(100% - 40px)
+    );
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+.narrow {
+
+    max-width: 780px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: white;
+
+    background-image:
+        url("images/fuga-colorada.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    overflow: hidden;
+
+}
+
+
+/* Oscurecimiento de la fotografía */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(7, 12, 8, 0.76),
+            rgba(7, 12, 8, 0.35),
+            rgba(7, 12, 8, 0.12)
+        ),
+
+        linear-gradient(
+            0deg,
+            rgba(5, 8, 5, 0.65),
+            transparent 60%
+        );
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+
+.nav-container {
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.20);
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+}
+
+
+.logo-circle {
+
+    width: 38px;
+
+    height: 38px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.65);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-family: var(--serif);
+
+    font-size: 16px;
+
+}
+
+
+/* MENU */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.nav-menu a {
+
+    opacity: .88;
+
+    transition:
+        opacity .2s,
+        transform .2s;
+
+}
+
+
+.nav-menu a:hover {
+
+    opacity: 1;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* CONTACTO NAV */
+
+.nav-contact {
+
+    padding:
+        9px
+        16px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.55);
+
+    border-radius: 999px;
+
+}
+
+
+/* BOTÓN MENÚ MÓVIL */
+
+.menu-button {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: auto;
+
+    margin-bottom: 12vh;
+
+}
+
+
+.eyebrow {
+
+    margin:
+        0
+        0
+        15px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .20em;
+
+    text-transform: uppercase;
+
+    color: var(--green);
+
+}
+
+
+.hero-eyebrow {
+
+    color: #e6dcc6;
+
+}
+
+
+/* TITULO */
+
+h1 {
+
+    margin: 0;
+
+    max-width: 850px;
+
+    font-family: var(--serif);
+
+    font-size:
+        clamp(
+            58px,
+            8vw,
+            105px
+        );
+
+    font-weight: 600;
+
+    line-height: .90;
+
+    letter-spacing: -.035em;
+
+}
+
+
+h1 em {
+
+    color: #dfcea6;
+
+    font-style: italic;
+
+}
+
+
+/* TEXTO HERO */
+
+.hero-description {
+
+    max-width: 620px;
+
+    margin:
+        30px
+        0;
+
+    color:
+        rgba(255,255,255,.88);
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 49px;
+
+    padding:
+        0
+        22px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .07em;
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+
+}
+
+
+.button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.18);
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.button-primary {
+
+    background: var(--sand);
+
+    color: var(--black);
+
+}
+
+
+.button-outline {
+
+    border:
+        1px solid
+        rgba(255,255,255,.55);
+
+    color: white;
+
+}
+
+
+.button-dark {
+
+    background: var(--black);
+
+    color: white;
+
+}
+
+
+.button-dark-outline {
+
+    border:
+        1px solid
+        var(--black);
+
+    color: var(--black);
+
+}
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    z-index: 3;
+
+    right: 30px;
+
+    bottom: 25px;
+
+    font-size: 10px;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    opacity: .75;
+
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.section {
+
+    padding:
+        105px
+        0;
+
+}
+
+
+/* =====================================================
+   INTRODUCCIÓN
+===================================================== */
+
+.introduction {
+
+    background: var(--paper);
+
+    text-align: center;
+
+}
+
+
+.introduction h2 {
+
+    margin-bottom: 25px;
+
+}
+
+
+h2 {
+
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size:
+        clamp(
+            43px,
+            5vw,
+            68px
+        );
+
+    font-weight: 600;
+
+    line-height: .98;
+
+    letter-spacing: -.025em;
+
+}
+
+
+.large-text {
+
+    margin:
+        15px
+        auto;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+}
+
+
+.large-text strong {
+
+    color: var(--text);
+
+}
+
+
+/* =====================================================
+   PRODUCTOS
+===================================================== */
+
+.products {
+
+    background: var(--cream);
+
+}
+
+
+.cards-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 25px;
+
+}
+
+
+.product-card,
+.visit-card {
+
+    padding:
+        clamp(30px, 5vw, 55px);
+
+    min-height: 600px;
+
+    border:
+        1px solid
+        var(--line);
+
+}
+
+
+.product-card {
+
+    background: #e8dfcb;
+
+}
+
+
+.visit-card {
+
+    background: #e5e9df;
+
+}
+
+
+.card-symbol {
+
+    margin-bottom: 28px;
+
+    font-size: 35px;
+
+}
+
+
+.product-card h2,
+.visit-card h2 {
+
+    margin-bottom: 25px;
+
+}
+
+
+.product-card h2 em,
+.visit-card h2 em {
+
+    font-style: italic;
+
+    color: var(--earth);
+
+}
+
+
+.product-card > p:not(.eyebrow),
+.visit-card > p:not(.eyebrow) {
+
+    color: var(--muted);
+
+}
+
+
+/* =====================================================
+   DETALLES PRODUCTO
+===================================================== */
+
+.product-details {
+
+    margin:
+        30px
+        0;
+
+}
+
+
+.product-details div {
+
+    padding:
+        9px
+        0;
+
+    border-bottom:
+        1px solid
+        var(--line);
+
+    color: #4f554d;
+
+    font-size: 12px;
+
+}
+
+
+.product-details span {
+
+    margin-right: 12px;
+
+    color: var(--green);
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   FRASE
+===================================================== */
+
+blockquote {
+
+    margin:
+        30px
+        0;
+
+    padding:
+        20px
+        0
+        20px
+        30px;
+
+    border-left:
+        2px solid
+        var(--sand);
+
+    font-family: var(--serif);
+
+    font-size: 27px;
+
+    line-height: 1.05;
+
+    font-style: italic;
+
+}
+
+
+blockquote span {
+
+    font-size: 50px;
+
+    vertical-align: -12px;
+
+}
+
+
+/* =====================================================
+   ENLACES
+===================================================== */
+
+.card-link {
+
+    display: inline-block;
+
+    padding-bottom: 3px;
+
+    border-bottom:
+        1px solid
+        currentColor;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   UBICACIÓN
+===================================================== */
+
+.location {
+
+    background: #d9d1bd;
+
+}
+
+
+.location-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+}
+
+
+.location-text {
+
+    padding-right: 15px;
+
+}
+
+
+.location-text > p:not(.eyebrow) {
+
+    color: #575b53;
+
+}
+
+
+.coordinates {
+
+    display: grid;
+
+    gap: 3px;
+
+    margin-top: 28px;
+
+    padding: 18px;
+
+    border:
+        1px solid
+        rgba(37,43,38,.18);
+
+    font-size: 12px;
+
+}
+
+
+.coordinates strong {
+
+    margin-bottom: 5px;
+
+    font-size: 10px;
+
+    letter-spacing: .12em;
+
+}
+
+
+.coordinates span {
+
+    color: #62665d;
+
+}
+
+
+/* =====================================================
+   MAPA
+===================================================== */
+
+.map-container {
+
+    height: 520px;
+
+    border:
+        10px solid
+        rgba(255,255,255,.50);
+
+    box-shadow:
+        0 25px 60px
+        rgba(44,38,27,.15);
+
+    overflow: hidden;
+
+}
+
+
+.map-container iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+
+}
+
+
+/* =====================================================
+   FILOSOFÍA
+===================================================== */
+
+.philosophy {
+
+    background: var(--black);
+
+    color: #eee9dc;
+
+}
+
+
+.philosophy-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.25fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 35px;
+
+}
+
+
+.philosophy h2 {
+
+    color: #f4efdf;
+
+}
+
+
+.philosophy .eyebrow {
+
+    color: #bcb59f;
+
+}
+
+
+.philosophy-item {
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.20);
+
+}
+
+
+.philosophy-item span {
+
+    color: #bcb59f;
+
+    font-size: 11px;
+
+    letter-spacing: .12em;
+
+}
+
+
+.philosophy-item h3 {
+
+    margin:
+        15px
+        0
+        8px;
+
+    font-family: var(--serif);
+
+    font-size: 28px;
+
+}
+
+
+.philosophy-item p {
+
+    margin: 0;
+
+    color: #aeb0a7;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   CONTACTO
+===================================================== */
+
+.contact {
+
+    background: #eee9dc;
+
+    text-align: center;
+
+}
+
+
+.contact-box {
+
+    max-width: 850px;
+
+}
+
+
+.contact h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.contact p:not(.eyebrow) {
+
+    max-width: 650px;
+
+    margin:
+        0
+        auto
+        30px;
+
+    color: var(--muted);
+
+}
+
+
+.contact-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #151b16;
+
+    color: #92998e;
+
+    font-size: 10px;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+}
+
+
+.footer-content {
+
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 800px) {
+
+
+    .container {
+
+        width:
+            calc(100% - 28px);
+
+    }
+
+
+    .nav-container {
+
+        min-height: 68px;
+
+    }
+
+
+    .menu-button {
+
+        display: block;
+
+    }
+
+
+    .nav-menu {
+
+        display: none;
+
+        position: absolute;
+
+        right: 14px;
+
+        top: 68px;
+
+        width: 220px;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 16px;
+
+        background:
+            rgba(20,26,20,.97);
+
+        border:
+            1px solid
+            rgba(255,255,255,.12);
+
+    }
+
+
+    .nav-menu.active {
+
+        display: flex;
+
+    }
+
+
+    .hero {
+
+        min-height: 82vh;
+
+    }
+
+
+    .hero-content {
+
+        margin-bottom: 10vh;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            clamp(
+                52px,
+                15vw,
+                80px
+            );
+
+    }
+
+
+    .hero-description {
+
+        font-size: 14px;
+
+    }
+
+
+    .section {
+
+        padding:
+            75px
+            0;
+
+    }
+
+
+    .cards-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .product-card,
+    .visit-card {
+
+        min-height: auto;
+
+    }
+
+
+    .location-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .location-text {
+
+        padding-right: 0;
+
+    }
+
+
+    .map-container {
+
+        height: 400px;
+
+    }
+
+
+    .philosophy-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .footer-content {
+
+        min-height: 90px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 5px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MÓVILES PEQUEÑOS
+===================================================== */
+
+@media (max-width: 450px) {
+
+
+    .logo-name {
+
+        font-size: 11px;
+
+    }
+
+
+    h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    h2 {
+
+        font-size: 44px;
+
+    }
+
+
+    .hero-buttons,
+    .contact-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .button {
+
+        width: 100%;
+
+    }
+
+
+    .map-container {
+
+        height: 350px;
+
+    }
+
+}
